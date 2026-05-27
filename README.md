@@ -34,6 +34,8 @@ The platform combines AI copilots, portfolio analytics, risk intelligence, and a
 - Framer Motion
 - Recharts
 
+## FE: https://wealth-pilot-ai-seven.vercel.app/
+
 ## Backend
 - Java 21
 - Spring Boot 3
@@ -280,3 +282,4 @@ This project is created for educational and evaluation purposes.
 # Author
 
 BHIMASHANKAR
+http://bhimashankar.vercel.app/
