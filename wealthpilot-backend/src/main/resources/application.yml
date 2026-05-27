@@ -1,0 +1,79 @@
+spring:
+  application:
+    name: wealthpilot-backend
+
+  # Relational Database Connection (PostgreSQL)
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/wealthpilot}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 300000
+      max-lifetime: 1800000
+      connection-timeout: 20000
+
+  # JPA & Hibernate Engine Configuration
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 25
+          order_inserts: true
+          order_updates: true
+
+  # Database Migrations (Flyway)
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+  # Caching Layer (Redis)
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 10
+          max-idle: 5
+          min-idle: 1
+
+  # File upload boundaries for meeting audio
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+# Spring Security & App Cryptographic Configurations
+app:
+  jwt:
+    secret: ${JWT_SECRET:d2VhbHRocGlsb3QtYWktZW50ZXJwcmlzZS1zZWNyZXQtc2lnbmluZy1rZXktMjAyNg==} # 256-bit Base64-encoded key
+    expiration-ms: 900000 # 15 minutes (900,000 ms)
+    refresh-expiration-ms: 604800000 # 7 days (604,800,000 ms)
+
+# Spring AI Client Configuration (OpenAI as baseline)
+spring.experimental.ai:
+  openai:
+    api-key: ${OPENAI_API_KEY:mock-key}
+    chat:
+      options:
+        model: gpt-4o
+        temperature: 0.2
+
+# Logging levels configuration
+logging:
+  level:
+    root: INFO
+    ai.wealthpilot: DEBUG
+    org.springframework.security: INFO
+    org.hibernate.SQL: WARN

@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  db:
+    image: ankane/pgvector:v0.5.1
+    container_name: wealthpilot-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: wealthpilot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d wealthpilot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: wealthpilot-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: .
+    container_name: wealthpilot-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=jdbc:postgresql://db:5432/wealthpilot
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - JWT_SECRET=d2VhbHRocGlsb3QtYWktZW50ZXJwcmlzZS1zZWNyZXQtc2lnbmluZy1rZXktMjAyNg==
+      - OPENAI_API_KEY=mock-key
+    restart: always
+
+volumes:
+  pgdata:
+  redisdata:

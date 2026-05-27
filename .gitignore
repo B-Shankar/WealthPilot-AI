@@ -1,0 +1,46 @@
+# Dependency folders
+node_modules/
+target/
+
+# Environment files
+.env
+.env.*
+application-local.yml
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Build outputs
+dist/
+build/
+out/
+
+# Jetro / AI tooling
+.jetro/
+.agents/
+.cursor/
+
+# Temporary / cache
+.cache/
+tmp/
+temp/
+
+# Database local files
+*.db
+*.sqlite
+
+# Coverage
+coverage/
+
+# Generated files
+*.generated.*

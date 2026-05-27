@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "jetro": {
+      "type": "stdio",
+      "command": "C:\\Users\\B.Shankar\\.jetro\\runtime\\node-win32-x64.exe",
+      "args": [
+        "C:\\Users\\B.Shankar\\.jetro\\mcp-server\\index.js"
+      ],
+      "env": {
+        "JET_WORKSPACE": "c:\\Users\\B.Shankar\\Desktop\\Learn\\berrywise\\WealthPilot AI",
+        "JET_API_URL": "https://api.jetro.ai",
+        "JET_JWT": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImM5YTBjMWRlYWEyN2JjNjMyNTUzYmM4MWEyMmQ4NzY1MWM3MTMyY2IiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vamV0cm8tY2RhZWYiLCJhdWQiOiJqZXRyby1jZGFlZiIsImF1dGhfdGltZSI6MTc3OTg4NTY3MiwidXNlcl9pZCI6InBIbjZyem5iQmVVMTFjS1kwQUc0bkU4bEdjdDEiLCJzdWIiOiJwSG42cnpuYkJlVTExY0tZMEFHNG5FOGxHY3QxIiwiaWF0IjoxNzc5ODkyMzQxLCJleHAiOjE3Nzk4OTU5NDEsImVtYWlsIjoibGVhcm4uYmhpbWFzaGFua2FyQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImxlYXJuLmJoaW1hc2hhbmthckBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.XxGHmOGNJAqFpvNEE2lxLRFpw1ClwwWrRTwO8pu335sCml-e95i-2WoBpD94fkhV_1lZ2C9pYf0vzkLRpPiqCwJSZI6x5Gz1y2-aJyjTKHXdSwuF8ZT_JxqiDAEkjYr305IiS9Ynwwa0XMRXet921cGRZk9zV-BuX6Nw1joDdCfsLQpCE7RG9hMBJVuK09-G7nodqsHIuXSB3mPohCVkjn_pOQU4tJu2UM65e8XnTgEU3Q8_PBL2-VHgaBEqOSvxvHY2buWMeMlfXcKNzXW4FcwTMwrz3WlSTV1NpNq6-ND9rAun92eP5XlcWG3oCHSOBE4DA2WXpmbYlydpTfd5Kg",
+        "PATH": "C:\\Users\\B.Shankar\\.jetro\\runtime;C:\\Python313\\Scripts\\;C:\\Python313\\;c:\\Users\\B.Shankar\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin;C:\\Program Files\\MongoDB\\Server\\8.0\\bin;C:\\mongosh-2.3.1-win32-x64\\bin;C:\\Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\MinGW\\bin;C:\\Program Files\\PostgreSQL\\16\\bin;C:\\Program Files\\Git\\cmd;C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\B.Shankar\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\B.Shankar\\AppData\\Roaming\\npm;C:\\Users\\B.Shankar\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\B.Shankar\\.dotnet\\tools;C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2024.2.0.2\\bin;C:\\Users\\B.Shankar\\Downloads\\apache-maven-3.9.9\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Java\\jdk-21\\bin;C:\\Program Files\\PuTTY\\;C:\\Program Files\\Amazon\\AWSCLI\\bin\\;C:\\Program Files\\nodejs\\;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Apache\\maven\\bin;C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\;C:\\Users\\B.Shankar\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\B.Shankar\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files\\JetBrains\\IntelliJ IDEA Community Edition 2024.3.1\\bin;;C:\\Program Files\\JetBrains\\WebStorm 2025.1.4.1\\bin;;C:\\Users\\B.Shankar\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PyCharm 2025.2.2\\bin;C:\\Users\\B.Shankar\\.local\\bin;C:\\Users\\B.Shankar\\AppData\\Local\\Programs\\Antigravity IDE\\bin"
+      }
+    }
+  }
+}
